@@ -48,3 +48,8 @@
                    {'turns': <turns>, 'X': 'player2'},
 
           ...}
+     # ходы в текущей партии
+    {frozenset({'player1', 'player2'}):
+            {'X': 'player1',
+             'player1': (1, 4, 5),
+             'player2': (2, 3, 8)}}
