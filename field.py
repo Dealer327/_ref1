@@ -15,6 +15,7 @@ def show_field(turns):
 
 '''Функция ввода хода игрока !!!тест'''
 
+
 def turns_test():
     a = int(input())
     while a != '':
