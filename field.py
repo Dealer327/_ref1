@@ -25,4 +25,5 @@ def show_field(turns):
     print("\t     |     |")
     print("\n")
 
+turns[1], turns[5] = 'X', 'O'
 show_field(turns)
