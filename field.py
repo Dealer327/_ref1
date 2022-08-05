@@ -2,6 +2,8 @@
 
 
 DIM = 3
+# ИСПОЛЬЗОВАТЬ: довольно разумным представляется один раз вычислить часто используемый диапазон, вычисляя его заново только при изменении DIM (вероятно, по вводу пользовательской команды)
+RANGE = range(DIM)
 turns = [[' ']*DIM for _ in range(DIM)]
 
 
@@ -18,10 +20,10 @@ def show_field(playfiled):
 def check_win():
     """Проверка выигрышных ходов"""
     # столбцы игрового поля
-    horizontals = [[turns[j][i] for j in range(DIM)] for i in range(DIM)]
+    horizontals = [[turns[j][i] for j in RANGE] for i in RANGE]
     # диагональные линии игрового поля
-    diagonals = [[turns[i][i] for i in range(DIM)],
-                 [turns[i][DIM-i-1] for i in range(DIM)]]
+    diagonals = [[turns[i][i] for i in RANGE],
+                 [turns[i][DIM-i-1] for i in RANGE]]
     # перебор горизонтальных вертикальных и диагональных линий игрового поля
     for win in (turns, horizontals, diagonals):
         for row in win:
