@@ -1,9 +1,9 @@
 """Дополнительный модуль подготовки игрового процесса"""
 
-
 from pathlib import Path
 from sys import argv
 from configparser import ConfigParser as CP
+
 
 SKRIPT_DIR = Path(argv[0]).parent
 PLAYERS_INI_PATH = SKRIPT_DIR / "players.ini"
