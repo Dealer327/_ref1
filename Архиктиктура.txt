@@ -23,18 +23,20 @@
 
     players.ini
 
-        [player 1]
+        [player1]
         first_time = True
         stats = 1,0,1
 
-        [player 2]
+        [player2]
         ...
 
     saves.ini
 
+        # ƒќЅј¬»“№: здесь и в файле дописать пример хранени€ данных о сделанных ходах в сжатом текстовом виде (есть в моЄм проекте)
+
         [player1,player2]
         X = player1
-        turns =  # TODO: дописать структуру хранени€ данных о ходах в сохранЄнной партии
+        turns =
 
         [player3,player2]
         ...
@@ -43,12 +45,10 @@
 
     # »мена игроков, статистика игроков
 
-        {'player1': {'hash': 's098123j1nkf47evp9',
-                     'first_time': True,
+        {'player1': {'first_time': True,
                      'stats': {'wins': 1, 'ties': 0, 'fails': 1}},
 
-         'player2': {'hash': 'ojw9er9pu2903k31lj',
-                     'first_time': False,
+         'player2': {'first_time': False,
                      'stats': {'wins': 3, 'ties': 2, 'fails': 0}},
 
          ...}
@@ -56,10 +56,10 @@
     # —охранЄнные незаконченные партии
 
          {frozenset({'player1', 'player2'}):
-                   {'turns': <turns>, 'X': 'player1'},
+                   {'turns': , 'X': 'player1'},
 
           frozenset({'player3', 'player2'}):
-                   {'turns': <turns>, 'X': 'player2'},
+                   {'turns': , 'X': 'player2'},
 
           ...}
 
