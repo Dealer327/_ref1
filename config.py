@@ -4,7 +4,6 @@ from pathlib import Path
 from sys import argv
 from configparser import ConfigParser as CP
 
-
 SKRIPT_DIR = Path(argv[0]).parent
 PLAYERS_INI_PATH = SKRIPT_DIR / "players.ini"
 SAVES_INI_PATH = SKRIPT_DIR / "saves.ini"
@@ -25,7 +24,6 @@ def read_ini() -> bool:
         PLAYERS[player] = {'first_time': ft, 'stats': {'W': int(st[0]),
                                                        'T': int(st[1]),
                                                        'F': int(st[2])}}
-        print(PLAYERS)
     ini_file.clear()
     ini_file.read(SAVES_INI_PATH)
     for save in ini_file.sections():
@@ -35,3 +33,10 @@ def read_ini() -> bool:
         return False
     else:
         return True
+
+
+read_ini()
+
+
+def save_ini():
+    """Записывает данные в файлы, из глобальных переменный"""
