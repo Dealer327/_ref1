@@ -7,18 +7,34 @@ import helpme
 import field
 
 print('Крестики | Нолики')
+
+if config.read_ini() != True:
+    print('Добро пожаловать в игру!')
 startgame.player_name()
+helpme.show_commands()
+
 if startgame.is_first_game():
     helpme.show_help()
-startgame.game_mode()
-startgame.token_player()
+    helpme.show_commands()
 
 
 
 # суперцикл
 while True:
-    command = input(' > ')
+    command = input(' > ').lower()
     if command in ('quit', 'exit', 'q', 'e'):
         break
     elif command in ('new', 'n'):
-        pass
+        startgame.game_mode()
+        startgame.token_player()
+        helpme.help_start()
+        field.turns_players()
+        helpme.show_commands()
+        continue
+
+
+
+
+
+
+

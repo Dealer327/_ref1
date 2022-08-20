@@ -8,8 +8,10 @@ SKRIPT_DIR = Path(argv[0]).parent
 PLAYERS_INI_PATH = SKRIPT_DIR / "players.ini"
 SAVES_INI_PATH = SKRIPT_DIR / "saves.ini"
 
+
 PLAYERS = {}
 SAVES = {}
+Score = tuple[dict, dict]
 
 
 def read_ini() -> bool:
@@ -35,8 +37,8 @@ def read_ini() -> bool:
         return True
 
 
-read_ini()
-
 
 def save_ini():
     """Записывает данные в файлы, из глобальных переменный"""
+
+
